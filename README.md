@@ -1,1 +1,1 @@
-# survivorprediction
+# survivorpredictionapp
