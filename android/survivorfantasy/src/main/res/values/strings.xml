@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Fantasy Survivor</string>
+    <string name="action_settings">Settings</string>
+    <string name="pick_account">You need to pick an account.</string>
+    <string name="not_online">You need to have internet access.</string>
+    <string name="homeTitle">Welcome</string>
+    <string name="userPictureDesc">Your Profile Picture</string>
+    <string name="splashLoginMsg">Loging In...</string>
+    <string name="authenticateMsg">Authenticating...</string>
+    <string name="contact_image_description">Contact Image</string>
+    <string name="contacts_title">Contact List</string>
+    <string name="refreshing_contact_title">Syncing Contacts...</string>
+    <string name="tryAgainButtonText">Try Again</string>
+    <string name="statusTitle">Change Status</string>
+    <string name="onlineStatus">Online</string>
+    <string name="offlineStatus">Offline</string>
+    <string name="awayStatus">Away</string>
+    <string name="refreshButtonText">Refresh</string>
+    <string name="addContactButtonText">Add</string>
+    <string name="statusIconDescription">Status Icon</string>
+    <string name="searchContactProgressBarTitle">Searching for Contact...</string>
+    <string name="alertNewContactEmailInvitation">If contact doesn\'t exist we will send an invitation for you.</string>
+    <string name="contactEmailFieldLabel">Contact Email</string>
+    <string name="searchContactImageDescription">Search Contact</string>
+    <string name="confirmAddContactImageContentDescription">Confirm Add Contact</string>
+    <string name="neededEmailError">Need to specify an email.</string>
+    <string name="neededNickNameError">Need to specify a nickname.</string>
+    <string name="statusOnline">Online</string>
+    <string name="statusOffline">Offline</string>
+    <string name="statusAway">Away</string>
+    <string name="contactAddedText">Contact Added.</string>
+    <string name="contactUpdatedText">Contact Updated.</string>
+    <string name="contactRemovedText">Contact Removed.</string>
+    <string name="failGettingContacts">Check your connection. Trying to get contacts again.</string>
+    <string name="lookingContact">Looking for Contact...</string>
+    <string name="updatingContact">Updating Contact...</string>
+    <string name="contactAlreadyExist">Contact already exists in your list.</string>
+    <string name="contactNotMatched">Contact not Found.</string>
+    <string name="msg_incoming_read">Read</string>
+    <string name="msg_incoming_unread">Unread</string>
+    <string name="msg_status_sent">Sent</string>
+    <string name="msg_status_pending">Pending</string>
+    <string name="msg_status_not_sent">Not Sent</string>
+    <string name="msg_status_not_sent_yet">Not Sent Yet</string>
+    <string name="msg_status_delivered">Delivered</string>
+    <string name="msg_status_seen">Seen</string>
+    <string name="msg_receive_at_label">Received at:</string>
+    <string name="msg_send_at_label">Sent at:</string>
+    <string name="check_wifi">Please make sure you have internet access.</string>
+    <string name="server_not_accessible">Sorry, we are having problems contacting the server.</string>
+    <string name="checking_server">Trying to contact the server. Please wait...</string>
+</resources>

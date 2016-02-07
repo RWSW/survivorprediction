@@ -1,0 +1,87 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashActivity"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:gravity="center_horizontal">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/errorImage"
+            android:src="@drawable/ic_warning_error"
+            android:layout_alignEnd="@+id/tryAgainButton"
+            android:visibility="invisible"
+            android:layout_alignStart="@+id/tryAgainButton"
+            android:layout_gravity="center_vertical" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/errorText"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentStart="false"
+            android:visibility="invisible"
+            android:gravity="center"
+            android:textColor="#ff495f"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal|top">
+
+        <TextView
+            android:id="@+id/splashTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/splashLoginMsg"
+            android:textSize="25sp"
+            android:layout_gravity="center"
+            android:gravity="center_vertical|center_horizontal" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="50dp"
+        android:layout_height="47dp"
+        android:indeterminate="true"
+        android:layout_gravity="center" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Login With"
+            android:id="@+id/loginAsLab"
+            android:layout_alignStart="@+id/splashTitle"
+            android:layout_gravity="center_vertical"
+            android:visibility="invisible" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/gmailButton"
+            android:background="@drawable/ic_gmail"
+            android:layout_marginLeft="10dp"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+</LinearLayout>

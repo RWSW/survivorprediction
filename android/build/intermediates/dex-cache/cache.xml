@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\Ryan\GitHub\survivorpredictionapp\survivorpredictionapp\android\survivorfantasy\libs\commons-codec-1.6.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="b7f0fc8f61ecadeb3695f0b9464755eee44374d4">
+        <dex dex="C:\Users\Ryan\GitHub\survivorpredictionapp\survivorpredictionapp\android\survivorfantasy\build\intermediates\pre-dexed\debug\commons-codec-1.6-13167bd8f79e29abebb49357f884d0bbf1300eb3.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ryan\GitHub\survivorpredictionapp\survivorpredictionapp\android\survivorfantasy\libs\httpcore-4.3.2.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="31fbbff1ddbf98f3aa7377c94d33b0447c646b6e">
+        <dex dex="C:\Users\Ryan\GitHub\survivorpredictionapp\survivorpredictionapp\android\survivorfantasy\build\intermediates\pre-dexed\debug\httpcore-4.3.2-aa73e4e5b40581a550b7f2277dcdee28257fd155.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ryan\GitHub\survivorpredictionapp\survivorpredictionapp\android\survivorfantasy\libs\httpclient-4.3.3.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="18f4247ff4572a074444572cee34647c43e7c9c7">
+        <dex dex="C:\Users\Ryan\GitHub\survivorpredictionapp\survivorpredictionapp\android\survivorfantasy\build\intermediates\pre-dexed\debug\httpclient-4.3.3-e5ca5b3112aa71821b841f9a7e7a9e2e7d2ba819.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ryan\GitHub\survivorpredictionapp\survivorpredictionapp\android\survivorfantasy\libs\commons-logging-1.1.3.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="f6f66e966c70a83ffbdb6f17a0919eaf7c8aca7f">
+        <dex dex="C:\Users\Ryan\GitHub\survivorpredictionapp\survivorpredictionapp\android\survivorfantasy\build\intermediates\pre-dexed\debug\commons-logging-1.1.3-965f76cfaa2663973d67051c3766d84466862c28.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ryan\GitHub\survivorpredictionapp\survivorpredictionapp\android\survivorfantasy\build\intermediates\exploded-aar\com.android.support\appcompat-v7\19.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="f71a6822470c9eb659d4f4a6cb57b780b35f058b">
+        <dex dex="C:\Users\Ryan\GitHub\survivorpredictionapp\survivorpredictionapp\android\survivorfantasy\build\intermediates\pre-dexed\debug\classes-debfa812a51d517d97b4ace635acf16062b06471.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ryan\.gradle\caches\modules-2\files-2.1\org.springframework.android\spring-android-core\1.0.1.RELEASE\e68f0e8e4b636ee30c4de58953be38d9b72a5e3b\spring-android-core-1.0.1.RELEASE.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="e68f0e8e4b636ee30c4de58953be38d9b72a5e3b">
+        <dex dex="C:\Users\Ryan\GitHub\survivorpredictionapp\survivorpredictionapp\android\survivorfantasy\build\intermediates\pre-dexed\debug\spring-android-core-1.0.1.RELEASE-88c3906b182c2c9c8137dd8a7c08ca8858d69326.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ryan\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.1.1\ab19bfb23f641f189b6dca9a4d393f8dc291103a\picasso-2.1.1.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="ab19bfb23f641f189b6dca9a4d393f8dc291103a">
+        <dex dex="C:\Users\Ryan\GitHub\survivorpredictionapp\survivorpredictionapp\android\survivorfantasy\build\intermediates\pre-dexed\debug\picasso-2.1.1-b728cb74a67cc1ad846732bf7a8a0360ab5f3e39.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ryan\.gradle\caches\modules-2\files-2.1\com.octo.android.robospice\robospice-spring-android\1.4.9\1dd2aef1f33a210c87c41cf28c0c3c2891e7a813\robospice-spring-android-1.4.9.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="1dd2aef1f33a210c87c41cf28c0c3c2891e7a813">
+        <dex dex="C:\Users\Ryan\GitHub\survivorpredictionapp\survivorpredictionapp\android\survivorfantasy\build\intermediates\pre-dexed\debug\robospice-spring-android-1.4.9-23837dce98058edf87efac1951cbf868f8d36245.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ryan\.gradle\caches\modules-2\files-2.1\org.springframework.android\spring-android-rest-template\1.0.1.RELEASE\e132d929bd181941f79b0d63edafb8a86ae6fd33\spring-android-rest-template-1.0.1.RELEASE.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="e132d929bd181941f79b0d63edafb8a86ae6fd33">
+        <dex dex="C:\Users\Ryan\GitHub\survivorpredictionapp\survivorpredictionapp\android\survivorfantasy\build\intermediates\pre-dexed\debug\spring-android-rest-template-1.0.1.RELEASE-68a689bb58198c035b404f76ce6fe4c8ec909333.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ryan\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-lang3\3.2.1\66f13681add50ca9e4546ffabafaaac7645db3cf\commons-lang3-3.2.1.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="66f13681add50ca9e4546ffabafaaac7645db3cf">
+        <dex dex="C:\Users\Ryan\GitHub\survivorpredictionapp\survivorpredictionapp\android\survivorfantasy\build\intermediates\pre-dexed\debug\commons-lang3-3.2.1-284c88f9a56b42bb0b42136c19be259ae9bd41fb.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ryan\GitHub\survivorpredictionapp\survivorpredictionapp\android\survivorfantasy\build\intermediates\exploded-aar\com.google.android.gms\play-services\4.2.42\jars\classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="e5f81129dfb3d02df80126512bc98278ed2bb40a">
+        <dex dex="C:\Users\Ryan\GitHub\survivorpredictionapp\survivorpredictionapp\android\survivorfantasy\build\intermediates\pre-dexed\debug\classes-5f2ed8471a3d50ebf2b2e417ca3b92bcd5e8fb28.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ryan\GitHub\survivorpredictionapp\survivorpredictionapp\android\survivorfantasy\libs\fluent-hc-4.3.3.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="ca5d08513083fa406278689b709c6886335dda7b">
+        <dex dex="C:\Users\Ryan\GitHub\survivorpredictionapp\survivorpredictionapp\android\survivorfantasy\build\intermediates\pre-dexed\debug\fluent-hc-4.3.3-ed7c20884e8789cbe814229839e0e8d5384b0154.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ryan\GitHub\survivorpredictionapp\survivorpredictionapp\android\survivorfantasy\libs\httpclient-cache-4.3.3.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="3907bf534091c3bcf68854cdd822b83650e8b935">
+        <dex dex="C:\Users\Ryan\GitHub\survivorpredictionapp\survivorpredictionapp\android\survivorfantasy\build\intermediates\pre-dexed\debug\httpclient-cache-4.3.3-e7e82eb32817552828093d84c466dc4de5efeb83.jar" />
+    </item>
+    <item
+        jar="C:\Program Files (x86)\Android\android-sdk\extras\android\m2repository\com\android\support\support-v4\19.0.1\support-v4-19.0.1.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="587da9a481ffd341d2fa091704489b89845ddacd">
+        <dex dex="C:\Users\Ryan\GitHub\survivorpredictionapp\survivorpredictionapp\android\survivorfantasy\build\intermediates\pre-dexed\debug\support-v4-19.0.1-3bd524bce860c05dd689a3edaf8f1c64912cffab.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ryan\GitHub\survivorpredictionapp\survivorpredictionapp\android\survivorfantasy\libs\commons-io-2.4.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="b1b6ea3b7e4aa4f492509a4952029cd8e48019ad">
+        <dex dex="C:\Users\Ryan\GitHub\survivorpredictionapp\survivorpredictionapp\android\survivorfantasy\build\intermediates\pre-dexed\debug\commons-io-2.4-2afa8b82957dd4878246670d7512f51d3d90da9c.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ryan\GitHub\survivorpredictionapp\survivorpredictionapp\android\survivorfantasy\libs\jackson-all-1.9.9.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="6a6ffa8ada733458efb4999793dcc5b4b7b64e81">
+        <dex dex="C:\Users\Ryan\GitHub\survivorpredictionapp\survivorpredictionapp\android\survivorfantasy\build\intermediates\pre-dexed\debug\jackson-all-1.9.9-2e2ad3f5c7ceddad2e687fa7697058c6dea96c57.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ryan\.gradle\caches\modules-2\files-2.1\com.octo.android.robospice\robospice\1.4.9\2691f0fe8507c70237b730bbf26ff6aca50bb2f5\robospice-1.4.9.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="2691f0fe8507c70237b730bbf26ff6aca50bb2f5">
+        <dex dex="C:\Users\Ryan\GitHub\survivorpredictionapp\survivorpredictionapp\android\survivorfantasy\build\intermediates\pre-dexed\debug\robospice-1.4.9-efc82a0eaf2546deccb2665f873eb3bb16b16638.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ryan\GitHub\survivorpredictionapp\survivorpredictionapp\android\survivorfantasy\libs\joda-time-2.3.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="56498efd17752898cfcc3868c1b6211a07b12b8f">
+        <dex dex="C:\Users\Ryan\GitHub\survivorpredictionapp\survivorpredictionapp\android\survivorfantasy\build\intermediates\pre-dexed\debug\joda-time-2.3-4afb533cc6ca918c8e1153260b4f411373f9c2e7.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ryan\GitHub\survivorpredictionapp\survivorpredictionapp\android\survivorfantasy\libs\httpmime-4.3.3.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="e02368d7b56c0c376f227378a4f77de62864d020">
+        <dex dex="C:\Users\Ryan\GitHub\survivorpredictionapp\survivorpredictionapp\android\survivorfantasy\build\intermediates\pre-dexed\debug\httpmime-4.3.3-6732c71038cbb5cc70ee447382e5f53d25e7cfc6.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ryan\GitHub\survivorpredictionapp\survivorpredictionapp\android\survivorfantasy\libs\guava-16.0.1.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="5fa98cd1a63c99a44dd8d3b77e4762b066a5d0c5">
+        <dex dex="C:\Users\Ryan\GitHub\survivorpredictionapp\survivorpredictionapp\android\survivorfantasy\build\intermediates\pre-dexed\debug\guava-16.0.1-d9bbe24b95c1e65be2b4bc3fb03aa439749a9ecd.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ryan\.gradle\caches\modules-2\files-2.1\com.octo.android.robospice\robospice-cache\1.4.9\93727a3ea1199751517f2279a78c1f79981eac1b\robospice-cache-1.4.9.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="93727a3ea1199751517f2279a78c1f79981eac1b">
+        <dex dex="C:\Users\Ryan\GitHub\survivorpredictionapp\survivorpredictionapp\android\survivorfantasy\build\intermediates\pre-dexed\debug\robospice-cache-1.4.9-eb9ed43464030d4710454732ff82d83f0e02567e.jar" />
+    </item>
+
+</items>
