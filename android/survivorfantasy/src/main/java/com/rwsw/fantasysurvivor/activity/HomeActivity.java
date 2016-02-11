@@ -10,12 +10,22 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.octo.android.robospice.persistence.exception.SpiceException;
+import com.octo.android.robospice.request.listener.RequestListener;
 import com.rwsw.fantasysurvivor.R;
+import com.rwsw.fantasysurvivor.request.GetGroupRESTFulRequest;
 import com.rwsw.fantasysurvivor.util.AccountUtils;
+import com.rwsw.fantasysurvivor.util.RequestUtils;
+
+import org.w3c.dom.Text;
 
 import java.util.Timer;
 
@@ -33,6 +43,11 @@ public class HomeActivity extends BaseSpiceActivity {
     private ListView contactListView;
     private AsyncTask getImageTask = null;
     private Timer reloadContactTimer = null;
+    private GetGroupRESTFulRequest groupRequest;
+    private TextView gettingGroupId;
+    private ProgressBar spinner;
+    private TextView enterText;
+    private Button newGroup, existingGroup;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -42,6 +57,11 @@ public class HomeActivity extends BaseSpiceActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
 
         this.initializeUI();
+        gettingGroupId = (TextView)findViewById(R.id.gettingGroupID);
+        spinner = (ProgressBar)findViewById(R.id.groupProgressBar);
+        enterText = (TextView)findViewById(R.id.introText);
+        newGroup = (Button)findViewById(R.id.new_group);
+        existingGroup = (Button)findViewById(R.id.existing_group);
 
         email = AccountUtils.getAccountName(this);
 
@@ -50,6 +70,11 @@ public class HomeActivity extends BaseSpiceActivity {
             this.finish();
         }
         FantasySurvivor.setUsername(email);
+        if (RequestUtils.isDeviceOnline() && RequestUtils.isServerOnline()) {
+            groupRequest = new GetGroupRESTFulRequest();
+            GetGroupRequestListener listener = new GetGroupRequestListener();
+            FantasySurvivor.getSpiceManager().execute(groupRequest, listener);
+        }
     }
 
     @Override
@@ -73,21 +98,12 @@ public class HomeActivity extends BaseSpiceActivity {
     @Override
     public void onStart() {
         super.onStart();
-
-        final Handler handler = new Handler();
-        reloadContactTimer = new Timer();
-        NotificationManager mNotificationManager = (NotificationManager)
-                getSystemService(Context.NOTIFICATION_SERVICE);
-        mNotificationManager.cancelAll();
         homeActive = true;
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        NotificationManager mNotificationManager = (NotificationManager)
-                getSystemService(Context.NOTIFICATION_SERVICE);
-        mNotificationManager.cancelAll();
         homeActive = true;
     }
 
@@ -129,5 +145,59 @@ public class HomeActivity extends BaseSpiceActivity {
         //imageProfile = (ImageView) findViewById(R.id.profilePicture);
         //textViewName = (TextView) findViewById(R.id.usernameLabel);
         //textViewEmail = (TextView) findViewById(R.id.emailLabel);
+    }
+
+    public void joinNewGroup(View view) {
+        Intent intent = new Intent(this, JoinGroupActivity.class);
+        intent.putExtra("newvsexisting", 2);
+        startActivity(intent);
+    }
+
+    public void joinExistingGroup(View view) {
+        Intent intent = new Intent(this, JoinGroupActivity.class);
+        intent.putExtra("newvsexisting", 1);
+        startActivity(intent);
+    }
+
+    private class GetGroupRequestListener implements RequestListener<String> {
+
+        @Override
+        public void onRequestFailure(SpiceException spiceException) {
+//            NewContactActivity.this.setProgressBarIndeterminateVisibility(false);
+            String e = spiceException.getLocalizedMessage();
+            spiceException.printStackTrace();
+            Toast.makeText(mActivity, "FAIL: " + e, Toast.LENGTH_SHORT).show();
+        }
+
+        @Override
+        public void onRequestSuccess(String group) {
+            /**
+             ADDED_CONTACT = 1;
+             ALREADY_EXISTS_CONTACT = 2;
+             ADD_ERROR = 0;
+             */
+            if (group == null) {
+                SpiceException e = new SpiceException("Retrived information is empty.");
+                onRequestFailure(e);
+//                updateStatusIndicator(NOT_EXISTS_CONTACT);
+                return;
+            } else if (group.equals("0000")) {
+//                Toast.makeText(mActivity, "SUCCESS", Toast.LENGTH_SHORT).show();
+                gettingGroupId.setVisibility(View.GONE);
+                spinner.setVisibility(View.GONE);
+                enterText.setVisibility(View.VISIBLE);
+                newGroup.setVisibility(View.VISIBLE);
+                existingGroup.setVisibility(View.VISIBLE);
+                return;
+            } else {
+                Toast.makeText(mActivity, "ALREADY IN GROUP:" + group, Toast.LENGTH_LONG).show();
+                return;
+
+//                setResult(1);
+//                Intent data = new Intent();
+//                data.putExtra("group_id", group);
+//                finish();
+            }
+        }
     }
 }

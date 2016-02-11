@@ -11,7 +11,7 @@
     <string name="authenticateMsg">Authenticating...</string>
     <string name="contact_image_description">Contact Image</string>
     <string name="contacts_title">Contact List</string>
-    <string name="refreshing_contact_title">Syncing Contacts...</string>
+    <string name="getting_group_id">Logging In...</string>
     <string name="tryAgainButtonText">Try Again</string>
     <string name="statusTitle">Change Status</string>
     <string name="onlineStatus">Online</string>
@@ -51,4 +51,13 @@
     <string name="check_wifi">Please make sure you have internet access.</string>
     <string name="server_not_accessible">Sorry, we are having problems contacting the server.</string>
     <string name="checking_server">Trying to contact the server. Please wait...</string>
+    <string name="intro_text">Welcome to Fantasy Survivor! You are not yet part of a group. Would you like to join an existing group or create a new group?</string>
+    <string name="new_group">New Group</string>
+    <string name="existing_group">Existing Group</string>
+    <string name="create_group_header">Please enter a group name and a unique id for the group you would like to create. You will need to provide the unique group id to anyone that would like to join your group.</string>
+    <string name="join_group_header">Please enter the unique id of the group you would like to join.</string>
+    <string name="groupnamelabel">Group Name:</string>
+    <string name="join_group">Join Group</string>
+    <string name="create_group">Create Group</string>
+    <string name="groupidlabel">Group ID:</string>
 </resources>
