@@ -159,6 +159,12 @@ public class HomeActivity extends BaseSpiceActivity {
         startActivity(intent);
     }
 
+    public void launchIntoGroup() {
+        Intent intent = new Intent(this, GroupSummaryActivity.class);
+        intent.putExtra("newvsexisting", 0);
+        startActivity(intent);
+    }
+
     private class GetGroupRequestListener implements RequestListener<String> {
 
         @Override
@@ -191,6 +197,8 @@ public class HomeActivity extends BaseSpiceActivity {
                 return;
             } else {
                 Toast.makeText(mActivity, "ALREADY IN GROUP:" + group, Toast.LENGTH_LONG).show();
+                launchIntoGroup();
+
                 return;
 
 //                setResult(1);

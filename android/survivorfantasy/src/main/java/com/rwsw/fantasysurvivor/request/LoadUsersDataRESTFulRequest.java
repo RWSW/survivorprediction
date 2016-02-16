@@ -1,0 +1,68 @@
+package com.rwsw.fantasysurvivor.request;
+
+import android.net.Uri;
+import android.util.Log;
+
+import com.octo.android.robospice.request.springandroid.SpringAndroidSpiceRequest;
+import com.rwsw.fantasysurvivor.activity.FantasySurvivor;
+import com.rwsw.fantasysurvivor.util.RequestUtils;
+
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.HttpStatus;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.util.EntityUtils;
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+public class LoadUsersDataRESTFulRequest extends SpringAndroidSpiceRequest<String> {
+
+    private String contactID = "";
+    private String GET_MESSAGE = "/userdata/get";
+
+    public LoadUsersDataRESTFulRequest() {
+        super(String.class);
+    }
+
+    @Override
+    public String loadDataFromNetwork() throws Exception {
+        String _url = FantasySurvivor.getServerAddress() + GET_MESSAGE;
+        // With Uri.Builder class we can build our url is a safe manner
+        Uri.Builder uriBuilder = Uri.parse(_url).buildUpon();
+
+        HttpGet httpGet = RequestUtils.getHttpGet(uriBuilder.toString());
+        HttpClient httpclient = new DefaultHttpClient();
+        HttpResponse response = httpclient.execute(httpGet);
+        int code = response.getStatusLine().getStatusCode();
+        String responseStr = "";
+        JSONObject responseData;
+
+        if (code == HttpStatus.SC_OK) {
+            HttpEntity resEntity = response.getEntity();
+            responseStr = EntityUtils.toString(resEntity);
+        }
+
+        if (response != null) {
+            response.getEntity().consumeContent();
+        }
+        responseData = new JSONObject(responseStr);
+        JSONObject udobject = responseData.getJSONObject("userdata");
+        JSONArray udarray = udobject.getJSONArray("userdata");
+        int size = udarray.length();
+        String datastrings = "";
+        for (int i = 0; i < udarray.length(); i++) {
+            JSONObject userobject = udarray.getJSONObject(i);
+            datastrings = datastrings + ":";
+            JSONArray userarray = userobject.getJSONArray("user" + i);
+            datastrings = datastrings + userarray.toString();
+        }
+        datastrings = datastrings + ":";
+
+        Log.i("RYAN", datastrings);
+        return datastrings;
+    }
+}
+
+

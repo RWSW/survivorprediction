@@ -55,6 +55,7 @@ public class JoinGroupActivity extends BaseSpiceActivity {
     public static Integer ExistingGroup = 1;
     public static Integer NewGroup = 2;
     public Integer GroupType = 0;
+    private Boolean stopGroupIds = false;
     private Boolean receivedGroupIds = false;
     private String groupIDvals = null;
 
@@ -108,6 +109,18 @@ public class JoinGroupActivity extends BaseSpiceActivity {
     @Override
     public void onStart() {
         super.onStart();
+        stopGroupIds = false;
+        startpolling();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        stopGroupIds = false;
+        startpolling();
+    }
+
+    public void startpolling() {
         final Handler handler = new Handler();
         getGroupsTimer = new Timer();
         TimerTask doAsynchronousTask = new TimerTask() {
@@ -115,24 +128,21 @@ public class JoinGroupActivity extends BaseSpiceActivity {
             public void run() {
                 handler.post(new Runnable() {
                     public void run() {
-                        if (receivedGroupIds == false) {
+                        if (stopGroupIds != true) {
                             getGroupIds();
                         }
                     }
                 });
             }
         };
-        getGroupsTimer.scheduleAtFixedRate(doAsynchronousTask, 0, 2000);
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
+        getGroupsTimer.scheduleAtFixedRate(doAsynchronousTask, 0, 1000);
     }
 
     @Override
     public void onPause() {
         super.onPause();
+        stopGroupIds = true;
+        getGroupsTimer.cancel();
         FantasySurvivor.unregisterNetworkReceiver();
         homeActive = false;
     }
@@ -148,6 +158,8 @@ public class JoinGroupActivity extends BaseSpiceActivity {
     @Override
     public void onStop() {
         super.onStop();
+        stopGroupIds = true;
+        getGroupsTimer.cancel();
         FantasySurvivor.unregisterNetworkReceiver();
         homeActive = false;
     }
@@ -195,20 +207,34 @@ public class JoinGroupActivity extends BaseSpiceActivity {
     public void joinExistingGroup(String groupid) {
         enterText.setText("");
         joinGroup.setEnabled(true);
-        //TODO: NEED TO IMPLEMENT JOIN GROUP!
+        Intent intent = new Intent(this, GroupSummaryActivity.class);
+        intent.putExtra("newvsexisting", 1);
+        intent.putExtra("groupname", "");
+        intent.putExtra("groupid", groupid);
+        stopGroupIds = true;
+        getGroupsTimer.cancel();
+        startActivity(intent);
     }
 
     public void createNewGroup(String groupname, String groupid) {
         enterText.setText("");
         groupnameinput.setText("");
         joinGroup.setEnabled(true);
-        //TODO: NEED TO IMPLEMENT CREATE GROUP AND JOIN!
+        Intent intent = new Intent(this, GroupSummaryActivity.class);
+        intent.putExtra("newvsexisting", 2);
+        intent.putExtra("groupname", groupname);
+        intent.putExtra("groupid", groupid);
+        stopGroupIds = true;
+        getGroupsTimer.cancel();
+        startActivity(intent);
     }
 
     public void enterGroup(View view) {
         joinGroup.setEnabled(false);
         if (receivedGroupIds == false) {
             //TODO: need to wait while group ids are gathered!
+            Toast.makeText(this, "Please wait.", Toast.LENGTH_SHORT).show();
+            joinGroup.setEnabled(true);
         } else {
             if (GroupType == ExistingGroup) {
                 if (enterText.getText().toString().equals("")) {

@@ -20,6 +20,7 @@ public class FantasySurvivor extends Application {
     private static final BroadcastReceiver networkBroadCast = new NetworkChangeReceiver();
     /* Read Only. */
     private static String serverAddress = "http://24.118.160.119:8888"; //TODO: This needs to be updated to server address!
+//    private static String serverAddress = "http://208.123.42.232:8888";
     private static Context context;
     private static String mUsername;
     private static String mGCMId = "";
